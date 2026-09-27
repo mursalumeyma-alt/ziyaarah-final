@@ -25,10 +25,10 @@ export default function Sidebar() {
             Dashboard
           </Link>
 
-          <Link to="/trips">
-            <span className="nav-icon">▣</span>
-            Trip Planner
-          </Link>
+         <Link to="/trip-planner">
+  <span className="nav-icon">▣</span>
+  Trip Planner
+</Link>
 
           <Link to="/ritual-tracker">
             <span className="nav-icon">✓</span>
