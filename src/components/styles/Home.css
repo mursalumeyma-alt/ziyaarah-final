@@ -1,15 +1,40 @@
-/* =========================
-   Hero Section
-========================= */
+/* ========================================
+   ZIYAARAH HOME PAGE
+   Responsive CSS
+   ======================================== */
+
+/* ---------- PAGE ---------- */
 
 .home-page {
   width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  background: #ffffff;
+  color: #1f2937;
 }
 
+.home-page *,
+.home-page *::before,
+.home-page *::after {
+  box-sizing: border-box;
+}
+
+.home-page img {
+  display: block;
+  max-width: 100%;
+}
+
+
+/* ========================================
+   HERO SECTION
+   ======================================== */
+
 .hero {
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 70px 60px;
+  min-height: 620px;
+  padding: 80px 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -18,226 +43,359 @@
 
 .hero-content {
   flex: 1;
-  max-width: 540px;
+  min-width: 0;
+  max-width: 560px;
 }
 
 .hero-badge {
   display: inline-block;
-  background: #e5f8f0;
-  color: #087f5b;
+  margin-bottom: 20px;
   padding: 8px 14px;
-  border-radius: 20px;
+  background: #ecfdf5;
+  color: #0f9d58;
+  border-radius: 999px;
   font-size: 14px;
-  margin-bottom: 22px;
+  font-weight: 600;
 }
 
 .hero h1 {
+  margin: 0 0 20px;
   font-size: 52px;
-  line-height: 1.08;
-  color: #1f2937;
-  margin-bottom: 20px;
-}
-
-.hero h1 span {
-  color: #087f5b;
-}
-
-.hero p {
-  font-size: 17px;
-  line-height: 1.7;
-  color: #5b6472;
-  margin-bottom: 28px;
-}
-
-
-.hero-buttons {
-  display: flex;
-  gap: 12px;
-  margin-top: 28px;
-}
-
-.hero-buttons .btn {
-  padding: 13px 22px;
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-/* Join Our Community */
-.hero-buttons .btn-primary {
-  background: #079669;
-  color: white;
-  border: 2px solid #079669;
-}
-
-.hero-buttons .btn-primary:hover {
-  background: #067c58;
-  border-color: #067c58;
-}
-
-/* Watch Demo */
-.hero-buttons .btn-secondary {
-  background: white;
-  color: #079669;
-  border: 2px solid #079669;
-}
-
-.hero-buttons .btn-secondary:hover {
-  background: #eefaf5;
-  border-color: #eefaf5;
-}
-.hero-image {
-  flex: 1;
-  max-width: 700px;
-  position: relative;
-
-}
-
-.hero-image img {
-  width: 100%;
-  height: 450px;
-  display: block;
-  object-fit: cover;
-  border-radius: 16px;
-}
-
-
-/* HERO BUTTONS 
-
-.hero-buttons {
-  display: flex;
-  gap: 15px;
-  margin-top: 25px;
-}
-
-  .hero-content {
-    max-width: 100%;
-     flex: 1;
-  }
-*/
-.btn {
-  padding: 14px 24px;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 15px;
-  font-weight: 600;
-}
-
-.btn-primary {
-  background: #16a34a;
-  color: white;
-}
-
-.btn-primary:hover {
-  background: #15803d;
-}
-
-.btn-secondary {
-  background: white;
-  border: 1px solid #d1d5db;
+  line-height: 1.1;
+  font-weight: 700;
   color: #111827;
 }
 
-.btn-secondary:hover {
-  background: #f3f4f6;
+.hero h1 span {
+  display: block;
+  color: #0f9d58;
 }
 
-/* FEATURES */
+.hero p {
+  margin: 0 0 30px;
+  max-width: 540px;
+  color: #6b7280;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.btn {
+  min-height: 46px;
+  padding: 12px 22px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.btn-primary {
+  background: #0f9d58;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background: #0c7f47;
+}
+
+.btn-secondary {
+  background: #ffffff;
+  color: #0f9d58;
+  border: 1px solid #0f9d58;
+}
+
+.btn-secondary:hover {
+  background: #ecfdf5;
+}
+
+
+/* ---------- HERO IMAGE ---------- */
+
+.hero-image {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  max-width: 520px;
+}
+
+.hero-image > img {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+
+/* ---------- FLOATING CARDS ---------- */
+
+/* Journey Complete - green card, top right */
+.journey-card {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 10px 14px;
+  background: #dff7e6;
+  border: 1px solid #b8e8c7;
+  border-radius: 10px;
+
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Sacred Journey - yellow card, bottom left */
+.sacred-card {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 10;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 10px 14px;
+  background: #fff4c2;
+  border: 1px solid #f3df7a;
+  border-radius: 10px;
+
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+/* ========================================
+   FEATURES SECTION
+   ======================================== */
 
 .features-section {
-  padding: 80px 60px;
-  background: #f9fafb;
+  width: 100%;
+  padding: 80px 40px;
+  background: #f8fafc;
 }
 
 .features-header {
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto 45px;
   text-align: center;
-  margin-bottom: 50px;
 }
 
 .features-header h2 {
-  font-size: 36px;
-  margin-bottom: 15px;
+  margin: 0 0 14px;
+  color: #111827;
+  font-size: 34px;
+  line-height: 1.25;
 }
 
 .features-header p {
+  margin: 0;
   color: #6b7280;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 .features-grid {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 25px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
 }
 
 .feature-card {
-  background: white;
-  padding: 30px;
-  border-radius: 18px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  min-width: 0;
+  padding: 28px 22px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+.feature-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  margin-bottom: 18px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 700;
+}
+.blue-icon {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #dbeafe;
+  color: #1d4ed8;
+
+  border-radius: 12px;
+
+  font-size: 24px;
+  font-weight: 700;
+}
+
+
+.green-icon {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #dcfce7;
+  color: #15803d;
+
+  border-radius: 12px;
+
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.blue-icon {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #1d4ed8;
+  color: #ffffff;
+
+  border-radius: 12px;
+
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.green-icon {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #15803d;
+  color: #ffffff;
+
+  border-radius: 12px;
+
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.yellow-icon {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #ca8a04;
+  color: #ffffff;
+
+  border-radius: 12px;
+
+  font-size: 24px;
+  font-weight: 700;
+}
+.orange-icon {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #c2410c;
+  color: #ffffff;
+
+  border-radius: 12px;
+
+  font-size: 24px;
+  font-weight: 700;
 }
 
 .feature-card h3 {
-  margin: 15px 0;
+  margin: 0 0 10px;
+  color: #111827;
+  font-size: 18px;
 }
 
 .feature-card p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+
+/* ========================================
+   JOURNEY SECTION
+   ======================================== */
+
+.journey-section {
+  width: 100%;
+  padding: 80px 40px;
+  background: #ffffff;
+}
+
+.journey-header {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.journey-header h2 {
+  margin: 0 0 12px;
+  color: #111827;
+  font-size: 34px;
+}
+
+.journey-header p {
+  margin: 0;
   color: #6b7280;
   line-height: 1.6;
 }
 
-.feature-icon {
-  width: 55px;
-  height: 55px;
-  border-radius: 12px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 24px;
-  color: white;
-}
-
-.blue-icon {
-  background: #2563eb;
-}
-
-.green-icon {
-  background: #16a34a;
-}
-
-.yellow-icon {
-  background: #eab308;
-}
-
-.orange-icon {
-  background: #f97316;
-}
-
-/* JOURNEY SECTION */
-
-.journey-section {
-  padding: 80px 60px;
-}
-
-.journey-header {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
 .journey-cards {
-  display: flex;
-  align-items: center;
+  position: relative;
+  width: 100%;
+  max-width: 1050px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 25px;
 }
 
 .journey-option {
-  flex: 1;
-  background: white;
-  border-radius: 18px;
+  min-width: 0;
   overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
 }
 
 .journey-option img {
@@ -247,101 +405,643 @@
 }
 
 .journey-info {
-  padding: 25px;
+  padding: 24px;
+}
+
+.journey-info h3 {
+  margin: 0 0 10px;
+  color: #111827;
+  font-size: 22px;
 }
 
 .journey-info p {
+  margin: 0 0 15px;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+.journey-info small {
+  color: #0f9d58;
+  font-weight: 600;
+}
+
+.journy-arrow {
+  display: none;
+}
+
+.journey-card strong,
+.sacred-card strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.journey-card small,
+.sacred-card small {
+  display: block;
+  margin-top: 3px;
+  font-size: 11px;
   color: #6b7280;
 }
 
-.journey-arrow {
-  width: 50px;
-  height: 50px;
-  border: none;
-  border-radius: 50%;
-  background: #16a34a;
-  color: white;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-/* CTA */
+/* ========================================
+   CTA SECTION
+   ======================================== */
 
 .cta-banner {
-  margin: 80px 60px;
-  background: #16a34a;
-  color: white;
-  border-radius: 25px;
-  overflow: hidden;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 70px 40px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  background: #1e293b;
+  color: #ffffff;
+  border-radius: 0;
 }
 
 .cta-content {
   flex: 1;
-  padding: 50px;
+  min-width: 0;
+}
+
+.cta-text {
+  max-width: 600px;
+}
+
+.cta-text h2 {
+  margin: 0 0 16px;
+  color: #ffffff;
+  font-size: 34px;
+  line-height: 1.25;
+}
+
+.cta-text p {
+  margin: 0 0 25px;
+  color: #d1d5db;
+  line-height: 1.7;
 }
 
 .cta-btn {
-  margin-top: 20px;
-  padding: 14px 24px;
-  border: none;
-  border-radius: 10px;
-  background: white;
-  color: #16a34a;
-  font-weight: 700;
+  padding: 13px 24px;
+  background: #10b981;
+  color: #ffffff;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
   cursor: pointer;
 }
 
+.cta-btn:hover {
+  background: #0f9d58;
+}
+
 .cta-image {
-  flex: 1;
+  flex: 0 1 450px;
+  min-width: 0;
 }
 
 .cta-image img {
   width: 100%;
-  height: 100%;
+  height: 280px;
   object-fit: cover;
+  border-radius: 14px;
 }
 
-/* QUICK LINKS */
+
+/* ========================================
+   QUICK LINKS
+   ======================================== */
 
 .quick-links {
-  padding: 60px;
+  width: 100%;
+  padding: 70px 40px;
+  background: #f8fafc;
   text-align: center;
+}
+
+.quick-links > h2 {
+  margin: 0 0 25px;
+  color: #111827;
+  font-size: 30px;
+}
+
+/*
+   Home.jsx currently has another .Quick-links
+   wrapper inside .quick-links.
+*/
+
+.Quick-links {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.Quick-links > h2 {
+  display: none;
 }
 
 .links-grid {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  margin-top: 25px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 15px;
 }
 
 .links-grid a {
-  text-decoration: none;
-  color: #16a34a;
+  display: block;
+  min-width: 0;
+  padding: 18px 15px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  color: #374151;
   font-weight: 600;
+  transition: 0.2s ease;
 }
 
-/* FOOTER */
+.links-grid a:hover {
+  color: #0f9d58;
+  border-color: #0f9d58;
+}
+
+
+/* ========================================
+   FOOTER
+   ======================================== */
 
 .footer {
+  width: 100%;
+  padding: 45px 40px;
   background: #111827;
-  color: white;
+  color: #ffffff;
+}
+
+.footer-logo {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
   text-align: center;
-  padding: 40px;
+}
+
+.footer-logo h3 {
+  margin: 0 0 20px;
+  font-size: 22px;
 }
 
 .footer-links {
-  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-bottom: 20px;
 }
 
 .footer-links a {
-  color: white;
-  text-decoration: none;
-  margin: 0 15px;
+  color: #d1d5db;
+  font-size: 14px;
 }
 
 .footer-links a:hover {
-  color: #16a34a;
+  color: #ffffff;
+}
+
+.footer-logo p {
+  margin: 0;
+  color: #9ca3af;
+  font-size: 13px;
+}
+
+
+/* ========================================
+   TABLET
+   ======================================== */
+
+@media (max-width: 1024px) {
+  .hero {
+    padding: 65px 30px;
+    gap: 40px;
+  }
+
+  .hero h1 {
+    font-size: 44px;
+  }
+
+.features-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  width: 100%;
+}
+
+.feature-card {
+  width: 100%;
+  padding: 18px 14px;
+}
+
+.feature-icon {
+  width: 42px;
+  height: 42px;
+  font-size: 20px;
+}
+
+.feature-card h3 {
+  font-size: 16px;
+}
+
+.feature-card p {
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+  .cta-banner {
+    padding: 60px 30px;
+    gap: 35px;
+  }
+
+  .quick-links {
+    padding: 60px 30px;
+  }
+
+  .links-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .footer {
+    padding: 40px 30px;
+  }
+}
+
+
+/* ========================================
+   MOBILE
+   ======================================== */
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+    padding: 50px 20px;
+    flex-direction: column;
+    text-align: center;
+    gap: 45px;
+  }
+
+  .hero-content {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .hero-badge {
+    font-size: 12px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+    line-height: 1.2;
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-image {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .hero-image > img {
+    width: 100%;
+    max-height: 400px;
+  }
+
+.journey-card {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.sacred-card {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+  .features-section,
+  .journey-section {
+    padding: 55px 20px;
+  }
+
+  .features-header h2,
+  .journey-header h2 {
+    font-size: 28px;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+  }
+
+  .feature-card {
+    padding: 24px;
+  }
+
+  .journey-cards {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+  }
+
+  .journey-option img {
+    height: 230px;
+  }
+
+  .cta-banner {
+    max-width: none;
+    padding: 50px 20px;
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+    border-radius: 0;
+  }
+
+  .cta-content {
+    width: 100%;
+  }
+
+  .cta-text {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .cta-text h2 {
+    font-size: 28px;
+  }
+
+  .cta-image {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .cta-image img {
+    height: 250px;
+  }
+
+  .quick-links {
+    padding: 50px 20px;
+  }
+
+  .links-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer {
+    padding: 40px 20px;
+  }
+}
+
+
+/* ========================================
+   SMALL MOBILE
+   ======================================== */
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 40px 15px;
+    gap: 35px;
+  }
+
+  .hero h1 {
+    font-size: 29px;
+  }
+
+  .hero p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .hero-buttons {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .hero-image {
+    width: 100%;
+  }
+
+  .hero-image > img {
+    max-height: 300px;
+    border-radius: 14px;
+  }
+
+ .journey-card {
+  top: 10px;
+  right: 10px;
+  bottom: auto;
+  left: auto;
+  width: auto;
+  margin: 0;
+}
+
+.sacred-card {
+  bottom: 10px;
+  left: 10px;
+  top: auto;
+  right: auto;
+  width: auto;
+  margin: 0;
+}
+  .features-section,
+  .journey-section {
+    padding: 45px 15px;
+  }
+
+  .features-header h2,
+  .journey-header h2 {
+    font-size: 25px;
+  }
+
+  .feature-card {
+    padding: 22px 18px;
+  }
+
+  .journey-option img {
+    height: 200px;
+  }
+
+  .journey-info {
+    padding: 20px;
+  }
+
+  .journey-info h3 {
+    font-size: 20px;
+  }
+
+  .cta-banner {
+    padding: 40px 15px;
+  }
+
+  .cta-text h2 {
+    font-size: 25px;
+  }
+
+  .cta-text p {
+    font-size: 14px;
+  }
+
+  .cta-btn {
+    width: 100%;
+  }
+
+  .cta-image img {
+    height: 210px;
+  }
+
+  .quick-links {
+    padding: 45px 15px;
+  }
+
+  .links-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer {
+    padding: 35px 15px;
+  }
+
+  .footer-links {
+    gap: 15px;
+  }
+}
+/* FINAL HERO FLOATING CARDS */
+.hero-image {
+  position: relative;
+}
+
+.hero-image .journey-card {
+  position: absolute !important;
+  top: 20px !important;
+  right: 20px !important;
+  bottom: auto !important;
+  left: auto !important;
+  z-index: 20;
+}
+
+.hero-image .sacred-card {
+  position: absolute !important;
+  bottom: 20px !important;
+  left: 20px !important;
+  top: auto !important;
+  right: auto !important;
+  z-index: 20;
+}
+
+.hero-image .journey-card strong,
+.hero-image .sacred-card strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.hero-image .journey-card small,
+.hero-image .sacred-card small {
+  display: block;
+  margin-top: 3px;
+  font-size: 11px;
+}
+/* Small floating hero cards */
+.hero-image .journey-card,
+.hero-image .sacred-card {
+  width: fit-content;
+  min-width: 0;
+  max-width: 180px;
+  height: auto;
+  padding: 7px 10px;
+  border-radius: 8px;
+  gap: 7px;
+  line-height: 1.2;
+}
+
+/* Green Journey Complete */
+.hero-image .journey-card {
+  top: 15px;
+  right: 15px;
+  bottom: auto;
+  left: auto;
+
+  background: #dcfce7;
+  border: 1px solid #86efac;
+}
+
+/* Yellow Sacred Journey */
+.hero-image .sacred-card {
+  bottom: 15px;
+  left: 15px;
+  top: auto;
+  right: auto;
+
+  background: #fef3c7;
+  border: 1px solid #fcd34d;
+}
+
+/* Small icon */
+.hero-image .journey-card > span,
+.hero-image .sacred-card > span {
+  width: 22px;
+  height: 22px;
+  min-width: 22px;
+  font-size: 11px;
+}
+
+/* Smaller text */
+.hero-image .journey-card strong,
+.hero-image .sacred-card strong {
+  font-size: 11px;
+}
+
+.hero-image .journey-card small,
+.hero-image .sacred-card small {
+  margin-top: 2px;
+  font-size: 9px;
+}
+/* Journey Complete card */
+.hero-image .journey-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  color: #1f2937;
+}
+
+/* Sacred Journey card */
+.hero-image .sacred-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  color: #1f2937;
+}
+
+/* Dark green icon */
+.hero-image .journey-card > span {
+  background: #166534;
+  color: #ffffff;
+}
+
+/* Dark yellow icon */
+.hero-image .sacred-card > span {
+  background: #a16207;
+  color: #ffffff;
+}
+
+/* Card text */
+.hero-image .journey-card strong,
+.hero-image .journey-card small,
+.hero-image .sacred-card strong,
+.hero-image .sacred-card small {
+  color: #1f2937;
 }

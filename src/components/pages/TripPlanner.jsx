@@ -5,10 +5,10 @@ import "../styles/TripPlanner.css";
 const initialJourneys = [
   {
     id: 1,
-    title: "Umrah 2024 - Spring",
+    title: "Umrah 2026 - Spring",
     type: "Umrah",
-    startDate: "3/14/2024",
-    endDate: "3/21/2024",
+    startDate: "3/14/2026",
+    endDate: "3/21/2026",
     stages: 4,
     progress: 50,
     active: true,
@@ -16,10 +16,10 @@ const initialJourneys = [
   },
   {
     id: 2,
-    title: "Hajj 2024 - Sacred Journey",
+    title: "Hajj 2026 - Sacred Journey",
     type: "Hajj",
-    startDate: "6/13/2024",
-    endDate: "6/20/2024",
+    startDate: "6/13/2026",
+    endDate: "6/20/2026",
     stages: 7,
     progress: 36,
     active: false,
@@ -35,8 +35,8 @@ const initialJourneys = [
     id: 3,
     title: "Family Umrah - December",
     type: "Umrah",
-    startDate: "12/19/2024",
-    endDate: "12/26/2024",
+    startDate: "12/19/2026",
+    endDate: "12/26/2026",
     stages: 4,
     progress: 0,
     active: false,
@@ -93,7 +93,7 @@ export default function TripPlanner() {
                 Dashboard
               </Link>
 
-              <Link to="/trip-planner" className="active">
+              <Link to="/trips" className="active">
                 <span className="nav-icon">▣</span>
                 Trip Planner
               </Link>
@@ -116,11 +116,6 @@ export default function TripPlanner() {
             <div className="trip-profile">
               <div className="trip-avatar">
                 A
-              </div>
-
-              <div>
-                <strong>amina</strong>
-                <span>amina@gmail.com</span>
               </div>
             </div>
 
@@ -246,8 +241,8 @@ export default function TripPlanner() {
                     <div
                       className="journey-progress-bar"
                       style={{
-                        width: "${journey.progress}%,"
-                      }}
+  width: `${journey.progress}%`,
+}}
               />
                   </div>
 

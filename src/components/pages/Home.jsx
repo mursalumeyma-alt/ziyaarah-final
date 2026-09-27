@@ -130,9 +130,12 @@ export default function Home() {
    <p> join thousands of Muslims who have prepared for their sacred
          journey with Ziyaarah. Start planning your Hajj or Umrah today
         with our comprehensive tools and guidance.</p>
-    <button className="cta-btn">
- Create Your Account
-    </button>
+ <button
+  className="cta-btn"
+  onClick={() => (window.location.href = "/register")}
+>
+  Create Your Account
+</button>
   </div>
   </div>
   <div className="cta-image">

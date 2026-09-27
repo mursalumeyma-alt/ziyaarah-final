@@ -1,0 +1,174 @@
+.trips-page {
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 40px;
+  background: #f5f8f6;
+}
+
+/* Header */
+.trips-page h1 {
+  margin: 0 0 8px;
+  color: #173b2f;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.trips-page > p {
+  margin: 0 0 28px;
+  color: #71807d;
+  font-size: 14px;
+}
+
+/* Trip Card */
+.trip-card {
+  width: 100%;
+  max-width: 700px;
+  box-sizing: border-box;
+
+  padding: 24px;
+
+  background: #ffffff;
+  border: 1px solid #e2e8e5;
+  border-radius: 14px;
+
+  box-shadow: 0 3px 10px rgba(15, 23, 42, 0.05);
+}
+
+.trip-card h2 {
+  margin: 0 0 10px;
+  color: #173b2f;
+  font-size: 20px;
+}
+
+.trip-card > p {
+  margin: 0 0 20px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* Trip information */
+.trip-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  margin-bottom: 22px;
+}
+
+.trip-info span {
+  padding: 8px 12px;
+
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 7px;
+
+  color: #166534;
+  font-size: 12px;
+}
+
+/* Button */
+.trip-card button {
+  border: none;
+  border-radius: 7px;
+
+  padding: 10px 16px;
+
+  background: #111111;
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.trip-card button:hover {
+  background: #166534;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 700px) {
+  .trips-page {
+    padding: 28px 20px;
+  }
+
+  .trips-page h1 {
+    font-size: 26px;
+  }
+
+  .trip-card {
+    max-width: 100%;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 500px) {
+  .trips-page {
+    padding: 20px 14px;
+  }
+
+  .trips-page h1 {
+    font-size: 23px;
+  }
+
+  .trips-page > p {
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+
+  .trip-card {
+    padding: 18px;
+    border-radius: 12px;
+  }
+
+  .trip-card h2 {
+    font-size: 18px;
+  }
+
+  .trip-card > p {
+    font-size: 13px;
+  }
+
+  .trip-info {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .trip-info span {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .trip-card button {
+    width: 100%;
+  }
+}
+
+/* =========================
+   SMALL PHONE
+========================= */
+
+@media (max-width: 360px) {
+  .trips-page {
+    padding: 16px 10px;
+  }
+
+  .trip-card {
+    padding: 15px;
+  }
+
+  .trips-page h1 {
+    font-size: 21px;
+  }
+
+  .trip-card h2 {
+    font-size: 16px;
+  }
+}

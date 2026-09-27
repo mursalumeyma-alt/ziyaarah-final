@@ -1,218 +1,725 @@
 /* =========================
-   DASHBOARD LAYOUT (Trip Planner Style)
+   DASHBOARD LAYOUT
 ========================= */
 
 .dashboard-layout {
-  min-height: 100vh;
   display: flex;
-  background: #f6f8fa;
-  color: #202938;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: #f8fafc;
+  color: #0f172a;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  box-sizing: border-box;
 }
+
+.dashboard-layout *,
+.dashboard-layout *::before,
+.dashboard-layout *::after {
+  box-sizing: border-box;
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
 
 .dashboard-content {
   flex: 1;
+  width: 100%;
   min-width: 0;
-  padding: 30px 25px 50px;
-  overflow-y: auto;
-}
-
-/* Welcome Header */
-.welcome-header {
+  min-height: 100vh;
+  padding: 32px 40px 60px;
+  background: #f8fafc;
+  overflow-x: hidden;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 25px;
-  margin-bottom: 32px;
-}
-
-.welcome-header h1 {
-  margin: 0;
-  color: #182131;
-  font-size: 32px;
-  line-height: 1.2;
-}
-
-.welcome-header p,
-.welcome-subtitle {
-  margin: 8px 0 0;
-  color: #66717e;
-  font-size: 16px;
-}
-
-/* Quote Banner */
-.quote-banner {
-  background: linear-gradient(135deg, #079b74, #0d8b67);
-  color: white;
-  padding: 25px 30px;
-  border-radius: 16px;
-  margin-bottom: 30px;
-  box-shadow: 0 2px 5px rgba(20, 30, 45, 0.025);
-}
-
-.quote-banner h3 {
-  margin: 0 0 8px 0;
-  font-size: 18px;
-}
-
-/* Stats Grid */
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  margin-bottom: 30px;
-}
-
-.stats-card {
-  padding: 24px;
-  border: 1px solid #e2e6eb;
-  border-radius: 16px;
-  background: #ffffff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 2px 5px rgba(20, 30, 45, 0.025);
-}
-
-.stats-title {
-  color: #5c6672;
-  font-size: 14px;
-  margin-bottom: 8px;
-}
-
-.stats-card h2,
-.stats-value {
-  margin: 0;
-  color: #182231;
-  font-size: 28px;
-}
-
-.stats-icon {
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
-  display: grid;
-  place-items: center;
-  background: #eefaf7;
-  color: #079b74;
-  font-size: 20px;
-}
-
-/* Main Grid */
-.dashboard-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  flex-direction: column;
   gap: 24px;
 }
 
-/* Current Journey / Cards */
-.current-journey,
-.journey-stages,
-.card {
-  padding: 31px 33px 28px;
-  border: 1px solid #e2e6eb;
-  border-radius: 16px;
-  background: #ffffff;
-  box-shadow: 0 2px 5px rgba(20, 30, 45, 0.025);
+/* =========================
+   WELCOME HEADER
+========================= */
+
+.welcome-header {
+  width: 100%;
 }
 
-.current-journey h2,
-.journey-stages h2,
-.section-heading h2 {
-  margin: 0 0 20px 0;
-  color: #182231;
-  font-size: 22px;
+.welcome-header h1 {
+  margin: 0 0 6px;
+  color: #0f172a;
+  font-size: 28px;
+  line-height: 1.2;
+  font-weight: 750;
 }
 
-.progress-box {
-  background: #f2f4f6;
-  padding: 20px;
-  border-radius: 12px;
-  margin: 20px 0;
-}
-
-.progress-header {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 11px;
-  color: #4e5967;
+.welcome-header p {
+  margin: 0;
+  color: #64748b;
   font-size: 14px;
+  line-height: 1.5;
+}
+
+/* =========================
+   QUOTE
+========================= */
+
+.quote-banner {
+  width: 100%;
+  min-height: 92px;
+  padding: 20px 25px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  box-shadow: 0 8px 20px rgba(5, 150, 105, 0.14);
+}
+
+.quote-icon {
+  width: 43px;
+  height: 43px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.17);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.quote-content {
+  min-width: 0;
+}
+
+.quote-tag {
+  display: block;
+  margin-bottom: 5px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 1.2px;
+}
+
+.quote-text {
+  margin: 0;
+  color: #fff;
+  font-size: 15px;
+  line-height: 1.5;
   font-weight: 600;
 }
 
-.progress-bar,
-.stage-progress {
+/* =========================
+   STATS
+========================= */
+
+.stats-grid {
   width: 100%;
-  height: 12px;
-  overflow: hidden;
-  border-radius: 20px;
-  background: #e3e7eb;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
 }
 
-.progress-fill,
-.stage-fill,
-.stage-progress-fill {
+.stats-card {
+  min-width: 0;
+  min-height: 90px;
+  padding: 14px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  box-shadow: 0 2px 7px rgba(15, 23, 42, 0.025);
+}
+
+.stats-info h3 {
+  margin: 0 0 6px;
+  color: #334155;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.stats-value {
+  margin: 0;
+  color: #0f172a;
+  font-size: 22px;
+  line-height: 1;
+  font-weight: 750;
+}
+
+.stats-icon {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+}
+
+.stats-icon.blue {
+  background: #1e3a8a;
+  color: #ffffff;
+}
+
+.stats-icon.orange {
+  background: #9a3412;
+  color: #ffffff;
+}
+
+.stats-icon.green {
+  background: #166534;
+  color: #ffffff;
+}
+
+.stats-icon.yellow {
+  background: #854d0e;
+  color: #ffffff;
+}
+/* =========================
+   MAIN DASHBOARD GRID
+========================= */
+
+.dashboard-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.current-journey-card,
+.journey-stages-card {
+  min-width: 0;
+  padding: 24px;
+  border: 1px solid #e2e8f0;
+  border-radius: 17px;
+  background: #fff;
+  box-shadow: 0 2px 7px rgba(15, 23, 42, 0.025);
+}
+
+/* =========================
+   CARD HEADER
+========================= */
+
+.card-header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 22px;
+}
+
+.card-title-box {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.card-title-box i {
+  color: #059669;
+}
+
+.card-title-box span {
+  color: #0f172a;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.view-details-link {
+  color: #059669;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* =========================
+   CURRENT JOURNEY
+========================= */
+
+.journey-main-info {
+  margin-bottom: 22px;
+}
+
+.journey-main-info h3 {
+  margin: 0 0 7px;
+  color: #0f172a;
+  font-size: 19px;
+  line-height: 1.2;
+  font-weight: 750;
+}
+
+.journey-main-info p {
+  margin: 0;
+  color: #64748b;
+  font-size: 12px;
+}
+
+.journey-main-info p i {
+  margin-right: 6px;
+  color: #059669;
+}
+
+/* =========================
+   PROGRESS
+========================= */
+
+.progress-section {
+  margin-bottom: 22px;
+}
+
+.progress-labels {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 9px;
+  color: #475569;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.progress-bar-container {
+  width: 100%;
+  height: 8px;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #ecfdf5;
+}
+
+.progress-bar-fill {
   height: 100%;
   border-radius: inherit;
-  background: #079b74;
+  background: linear-gradient(90deg, #059669, #10b981);
 }
 
-/* Stage Cards */
-.stage-card {
-  background: #f8fafc;
-  padding: 18px;
-  border-radius: 12px;
-  margin-bottom: 15px;
-  border: 1px solid #e2e6eb;
+/* =========================
+   JOURNEY DATES
+========================= */
+
+.journey-dates {
+  padding-top: 17px;
+  border-top: 1px solid #f1f5f9;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
 }
 
-.stage-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
+.journey-dates div {
+  min-width: 0;
+  color: #64748b;
+  font-size: 11px;
+  line-height: 1.5;
 }
 
-.stage-header h3 {
-  margin: 0;
-  color: #182231;
-  font-size: 15px;
+.journey-dates i {
+  margin-right: 6px;
+  color: #059669;
 }
 
-.stage-header span,
-.stage-status {
-  background: #f1f3f5;
-  color: #5e6875;
-  padding: 5px 12px;
+/* =========================
+   JOURNEY STAGES
+========================= */
+
+.stages-count {
+  padding: 6px 9px;
   border-radius: 20px;
-  font-size: 12px;
-  font-weight: 500;
+  background: #f8fafc;
+  color: #64748b;
+  font-size: 10px;
+  font-weight: 650;
+  white-space: nowrap;
 }
 
-.fill-50 { width: 50%; }
-.fill-25 { width: 25%; }
-.fill-10 { width: 10%; }
+.stages-list {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
 
-/* Responsive */
-@media (max-width: 1000px) {
-  .stats-grid {
-    grid-template-columns: 1fr 1fr;
+.stage-item {
+  padding: 13px 14px;
+  border: 1px solid #f1f5f9;
+  border-radius: 12px;
+  background: #f8fafc;
+}
+
+.stage-info-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 9px;
+}
+
+.stage-badge {
+  width: 25px;
+  height: 25px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 750;
+}
+
+.green-badge {
+  background: #059669;
+}
+
+.stage-info-top h4 {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  color: #334155;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.stage-info-top p {
+  margin: 0;
+}
+
+.stage-item > p {
+  margin: 0 0 9px 35px;
+  color: #94a3b8;
+  font-size: 9px;
+}
+
+.stage-status {
+  padding: 4px 7px;
+  border-radius: 20px;
+  background: #ecfdf5;
+  color: #059669;
+  font-size: 8px;
+  font-weight: 750;
+  white-space: nowrap;
+}
+
+.mini-progress-bar {
+  width: calc(100% - 35px);
+  margin-left: 35px;
+  height: 5px;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #e2e8f0;
+}
+
+.mini-fill {
+  height: 100%;
+  border-radius: inherit;
+  background: #059669;
+}
+
+/* =========================
+   BOTTOM CARDS
+========================= */
+
+.bottom-cards-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.bottom-card {
+  min-width: 0;
+  min-height: 112px;
+  padding: 20px;
+  border-radius: 16px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+}
+
+.bottom-card h3 {
+  margin: 0 0 7px;
+  color: #fff;
+  font-size: 17px;
+}
+
+.bottom-card p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.prayer-card {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+}
+
+.quran-card {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+}
+
+.community-card {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1024px) {
+  .dashboard-content {
+    padding: 28px 25px 50px;
   }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .dashboard-grid {
     grid-template-columns: 1fr;
   }
 }
 
-@media (max-width: 700px) {
-  .dashboard-layout {
-    flex-direction: column;
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  .dashboard-content {
+    padding: 22px 18px 40px;
+    gap: 20px;
   }
+
+  .welcome-header h1 {
+    font-size: 24px;
+  }
+
+  .quote-banner {
+    padding: 18px;
+  }
+
+  .quote-text {
+    font-size: 13px;
+  }
+
   .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .stats-card {
+    min-height: 115px;
+    padding: 16px;
+  }
+
+  .dashboard-grid {
     grid-template-columns: 1fr;
   }
-  .welcome-header {
-    flex-direction: column;
+
+  .bottom-cards-grid {
+    grid-template-columns: 1fr;
   }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 520px) {
+  .dashboard-content {
+    padding: 18px 14px 35px;
+  }
+
   .welcome-header h1 {
-    font-size: 27px;
+    font-size: 21px;
   }
+
+  .welcome-header p {
+    font-size: 12px;
+  }
+
+  .quote-banner {
+    padding: 15px;
+    gap: 12px;
+  }
+
+  .quote-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .quote-text {
+    font-size: 12px;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .stats-card {
+    min-height: 105px;
+    padding: 14px;
+  }
+
+  .stats-info h3 {
+    font-size: 11px;
+  }
+
+  .stats-value {
+    font-size: 23px;
+  }
+
+  .stats-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+  }
+
+  .current-journey-card,
+  .journey-stages-card {
+    padding: 18px;
+  }
+
+  .card-header-flex {
+    align-items: flex-start;
+  }
+
+  .journey-dates {
+    grid-template-columns: 1fr;
+  }
+
+  .stage-info-top {
+    flex-wrap: wrap;
+  }
+
+  .stage-status {
+    margin-left: auto;
+  }
+
+  .bottom-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================
+   VERY SMALL PHONES
+========================= */
+
+@media (max-width: 380px) {
+  .dashboard-content {
+    padding-left: 11px;
+    padding-right: 11px;
+  }
+
+  .stats-grid {
+    gap: 9px;
+  }
+
+  .stats-card {
+    padding: 12px;
+  }
+
+  .stats-info h3 {
+    font-size: 10px;
+  }
+
+  .stats-value {
+    font-size: 21px;
+  }
+
+  .stats-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
+  }
+.side-brand {
+  width: 150px;
+  padding: 8px 10px;
+  background: #166534;
+  color: #ffffff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.side-brand-icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #14532d;
+  color: #ffffff;
+  border-radius: 6px;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+.side-brand {
+  width: 145px !important;
+  height: 58px !important;
+  padding: 7px 9px !important;
+  background: #166534 !important;
+  border-radius: 8px !important;
+
+  display: flex !important;
+  align-items: center !important;
+  gap: 7px !important;
+
+  color: #ffffff !important;
+  overflow: hidden !important;
+}
+
+.side-brand-icon {
+  width: 22px !important;
+  height: 22px !important;
+  min-width: 22px !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  background: #14532d !important;
+  color: #ffffff !important;
+  border-radius: 5px !important;
+  font-size: 13px !important;
+}
+
+.side-brand h1,
+.side-brand h2,
+.side-brand h3,
+.side-brand p,
+.side-brand span {
+  margin: 0 !important;
+  color: #ffffff !important;
+  font-size: 13px !important;
+  line-height: 1.2 !important;
+}
+}
+.daily-prayers-card {
+  background: #166534;
+  color: #ffffff;
+  border: 1px solid #14532d;
+}
+
+.daily-prayers-card h3 {
+  color: #ffffff;
+}
+
+.daily-prayers-card p {
+  color: #dcfce7;
+}
+.bottom-card.prayer-card {
+  background: #166534 !important;
+  border: 1px solid #14532d !important;
+  color: #ffffff !important;
+}
+
+.bottom-card.prayer-card h3 {
+  color: #ffffff !important;
+}
+
+.bottom-card.prayer-card p {
+  color: #dcfce7 !important;
 }

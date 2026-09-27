@@ -250,7 +250,7 @@ export default function RitualTracker() {
           </header>
 
           <section className="trip-banner">
-            <h2>Umrah 2024 - Spring</h2>
+            <h2>Umrah 2026- Spring</h2>
             <p>Umrah Pilgrimage</p>
           </section>
 
