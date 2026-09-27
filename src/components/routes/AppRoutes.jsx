@@ -11,6 +11,7 @@ import Prayers from "../pages/Prayers";
 import Events from "../pages/Events";
 import Contact from "../pages/Contact";
 import Resources from "../pages/Resources";
+import Trips from "../pages/Trips";
 
 export default function AppRoutes() {
   return (
@@ -28,6 +29,7 @@ export default function AppRoutes() {
       <Route path="/events" element={<Events />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/resources" element={<Resources />} />
+      <Route path="/trips" element={<Trips />} />
     </Routes>
   );
 }
