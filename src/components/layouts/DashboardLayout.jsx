@@ -92,8 +92,8 @@ export default function DashboardLayout() {
               </div>
             </div>
             <div className="journey-dates">
-              <div><i className="fas fa-calendar-plus"></i> Start: 3/14/2024</div>
-              <div><i className="fas fa-calendar-check"></i> End: 3/21/2024</div>
+              <div><i className="fas fa-calendar-plus"></i> Start: 3/14/2026</div>
+              <div><i className="fas fa-calendar-check"></i> End: 3/21/2026</div>
             </div>
           </div>
 

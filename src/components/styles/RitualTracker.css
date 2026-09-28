@@ -538,4 +538,6 @@
   .task-type {
     margin-left: auto;
   }
+}body.sidebar-open {
+  overflow: hidden !important;
 }
