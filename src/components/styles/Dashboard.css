@@ -14,28 +14,24 @@
   align-items: stretch;
   margin: 0;
   padding: 0;
-  background: #e8eeeb;
+  background: #f5f8f6;
   color: #17251f;
   font-family: "Inter", Arial, sans-serif;
 }
-
-/* =========================================
-   MAIN CONTENT
-   ========================================= */
 
 .dashboard-content {
   flex: 1;
   min-width: 0;
   width: auto;
-
-  padding: 12px 32px 20px;
-
+  margin: 16px;
+  padding: 24px;
   overflow-x: hidden;
-
-  background: #e8eeeb;
+  background: #ffffff;
+  border: 1px solid #e3e9e5;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(20, 50, 38, 0.04);
+  box-sizing: border-box;
 }
-
-
 /* =========================================
    WELCOME HEADER
    ========================================= */
@@ -583,6 +579,34 @@
   background: #1e3a8a !important;
   color: #ffffff !important;
   border-top: 3px solid #172554 !important;
+}
+.prayer-card h3,
+.quran-card h3,
+.community-card h3 {
+  color: #ffffff !important;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 8px;
+  line-height: 1.4;
+}
+
+.prayer-card p,
+.quran-card p,
+.community-card p {
+  color: #ffffff !important;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.6;
+  margin: 0;
+  opacity: 1;
+}
+.prayer-card h3,
+.quran-card h3,
+.community-card h3,
+.prayer-card p,
+.quran-card p,
+.community-card p {
+  white-space: nowrap;
 }
 
 
